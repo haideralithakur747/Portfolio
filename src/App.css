@@ -1,0 +1,48 @@
+.navbar{
+    display: flex;
+    
+
+}
+.navbar h1{
+    font-size: 24px;
+    color: white;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: aqua;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    /* remove display: flex; unless needed for link content */
+}
+body{
+    padding:0;
+    margin:0;
+    background-color: black;
+}
+.home {
+  /* position: relative; so child absolute works */
+  color: white;
+  display: flex;
+  padding: 50px;
+}
+.home-text {
+  flex: 1;
+  /* padding-top: 200px; */
+  font-size: 30px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+h2 {
+  min-height: 2.5rem; /* or enough to fit the text */
+}
+
