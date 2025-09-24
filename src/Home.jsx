@@ -35,15 +35,24 @@ export default function Home() {
     return(
         <section id ="home">
         <div className="home">
-             <img src="pic.png" alt="" />
+             <img src="pic1.png" alt="" />
              <div className="home-text">
             <h3>Hi I'm </h3>
             
             <h1>Haider Thakur</h1>
             <h2 style={{ color: "white", fontSize: "2rem" }}>{displayText}</h2>
-            <p>This is the home section of my portfolio website.</p>
+            <p>I build responsive, dynamic, and user-focused interfaces that bring ideas to life. My goal is to craft seamless digital experiences that inspire and engage users.</p>
+            <button className="resume-btn">
+  <a href="/resume.pdf" download="My_Resume.pdf">
+    Download Resume
+  </a>
+</button>
+
+            <button>Contact Me</button>
            </div>
+           
         </div>
+        
         </section>
     )
 }
