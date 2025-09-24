@@ -13,7 +13,7 @@ const skills = [
 export default function SkillsCarousel() {
   return (
     <section id ="skills" >
-      <h1 style={{color: "white",textAlign: "center",marginTop: "80px"}}>My Skills</h1>
+      <h1 style={{color: "white",textAlign: "center",marginTop: "80px",fontSize: "75px"}}>My Skills</h1>
     <div className="carousel">
       <div className="carousel__container">
         {skills.map((skill, i) => (
