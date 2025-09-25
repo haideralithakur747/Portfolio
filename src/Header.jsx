@@ -6,7 +6,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <h1>MyPortfolio</h1>
+      <h1 >MyPortfolio</h1>
 
       <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
         ☰
