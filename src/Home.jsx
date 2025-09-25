@@ -1,6 +1,7 @@
-import {useState,useEffect} from "react"
+import { useState, useEffect } from "react";
+import Header from "./header";
 export default function Home() {
-    const words = ["FrontEnd Developer", "React Developer"];
+  const words = ["FrontEnd Developer", "React Developer"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [deleting, setDeleting] = useState(false);
@@ -31,28 +32,29 @@ export default function Home() {
     return () => clearTimeout(timeout); // ✅ cleanup prevents overlap
   }, [displayText, deleting, currentWordIndex, words]);
 
+  return (
+    <section id="home">
+      <div className="home">
+        <img src="pic1.png" alt="" />
+        <div className="home-text">
+          <h3>Hi I'm </h3>
 
-    return(
-        <section id ="home">
-        <div className="home">
-             <img src="pic1.png" alt="" />
-             <div className="home-text">
-            <h3>Hi I'm </h3>
-            
-            <h1>Haider Thakur</h1>
-            <h2 style={{ color: "white", fontSize: "2rem" }}>{displayText}</h2>
-            <p>I build responsive, dynamic, and user-focused interfaces that bring ideas to life. My goal is to craft seamless digital experiences that inspire and engage users.</p>
-            <button className="resume-btn">
-  <a href="/resume.pdf" download="My_Resume.pdf">
-    Download Resume
-  </a>
-</button>
+          <h1>Haider Thakur</h1>
+          <h2 style={{ color: "white", fontSize: "2rem" }}>{displayText}</h2>
+          <p>
+            I build responsive, dynamic, and user-focused interfaces that bring
+            ideas to life. My goal is to craft seamless digital experiences that
+            inspire and engage users.
+          </p>
+          <a href="/My_Resume.pdf" download="Haider_Ali_Resume.pdf">
+            <button>Download Resume</button>
+          </a>
 
+          <a href="#contact">
             <button>Contact Me</button>
-           </div>
-           
+          </a>
         </div>
-        
-        </section>
-    )
+      </div>
+    </section>
+  );
 }

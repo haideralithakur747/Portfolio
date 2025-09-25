@@ -3,7 +3,8 @@ import About from "./About";
 import Home from "./Home";
 import SkillsCarousel from "./skills";
 import EducationExperience from "./Edu&exp";
-import Projects from "./Projects";          
+import Projects from "./Projects";   
+import Contact from "./Contact";       
 
 import "./App.css"
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <SkillsCarousel />
         <EducationExperience />
         <Projects />
+        <Contact />
         </>
     )
 }

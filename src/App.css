@@ -124,9 +124,10 @@ button{
 }
 
 /* Smooth scrolling for navbar links */
-html {
+/* html {
   scroll-behavior: smooth;
-}
+  
+} */
 
 /* About Section */
 #about {
@@ -352,6 +353,11 @@ transition: transform 0.3s ease-in-out;
     grid-template-columns: 1fr;
   }
 }
+#project {
+  padding-top: 80px;
+  margin-top: -80px;  /* cancel out extra spacing in layout */
+}
+
 .Project_Container {
   /* 3 columns */
    position: sticky;
@@ -382,4 +388,8 @@ background-color: #222;
   height: auto;         /* keeps proportions */
   display: block;       /* removes unwanted bottom space */
   border-radius: 10px;  /* matches parent radius */
+}
+
+.resume-btn:hover {
+  background-color: #0056b3;
 }
