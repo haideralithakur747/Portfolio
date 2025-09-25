@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Header from "./header";
+
 export default function Home() {
   const words = ["FrontEnd Developer", "React Developer"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
