@@ -59,6 +59,14 @@ export default function Projects(){
         <button onClick={() => window.open("https://java-script-game-project.vercel.app/")}>View Project</button>
         <button onClick={() => window.open("https://github.com/haideralithakur747/java_script_game_project")}>GitHub</button>
         </div>
+           <div className="Project_Container">
+        <h1>React WebPage</h1>
+        <div className="imgbox">
+            <img src="gm.png" alt="" />
+        </div>
+        <button onClick={() => window.open("https://react-webpage-lbob.vercel.app/")}>View Project</button>
+        <button onClick={() => window.open("https://github.com/haideralithakur747/ReactWebpage")}>GitHub</button>
+        </div>
        </section>
        
     )
