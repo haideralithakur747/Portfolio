@@ -69,27 +69,101 @@
 }
 
 .home {
+   background: radial-gradient(circle at top left, #001f2d, #000);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap; /* so it stacks on mobile */
-  padding: 2rem;
-  color: white;
-  background-color:black; /* dark background */}
+  justify-content: center;
+  padding: 80px;/}
 
 .home-text {
   flex: 1;
-  font-size: clamp(1.5rem, 2vw, 2rem); /* responsive text */
-  padding-left: 100px;
+  padding-left: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+  color: white;
+  max-width: 600px;
+  animation: fadeInUp 1s ease-in-out;
 }
 
+/* Headings */
+.home-text h3 {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: #aaa;
+  letter-spacing: 2px;
+}
+
+.home-text h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: cyan;
+  font-weight: 700;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+.home-text h2 {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  color: #00ffff;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Paragraph */
+.home-text p {
+  color: #ddd;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+/* Buttons */
+.home-text button {
+  background: linear-gradient(90deg, #00ffff, #0077ff);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+  
+}
+
+.home-text button:hover {
+  background: linear-gradient(90deg, #0077ff, #00ffff);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+  transform: translateY(-3px);
+}
+
+/* Simple Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 .home img {
-  flex: 1;
-  max-width: 400px;
+ flex: 1;
+  max-width: 350px; /* limit size */
   width: 100%;
-  height: auto;
+  height: 350px;
   margin-left: auto;
-   border-radius: 50%; 
+  border-radius: 50%; /* keeps it circular */
+  object-fit: cover;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5); /* soft cyan glow */
+  transition: all 0.4s ease;
+}
+.home img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px rgba(0, 255, 255, 0.8); /* glow increase on hover */
 }
 @media (max-width: 768px) {
   .home {
@@ -105,23 +179,12 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: black;
+ background: radial-gradient(circle at top left, #001f2d, #000);
 }
 h2 {
   min-height: 2.5rem; /* or enough to fit the text */
 }
-button{
-    background-color: aqua;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    margin-left: 25px;
-    margin-top: 25px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 30px;
-    transition: background-color 0.3s ease;
-}
+
 
 /* Smooth scrolling for navbar links */
 /* html {
@@ -130,6 +193,10 @@ button{
 } */
 
 /* About Section */
+.about-container{
+background-color: #111;
+
+}
 #about {
   /* scroll-margin-top: 80px;   adjust to your navbar height */
   /* padding: 80px 20px;        space around the section */
@@ -265,17 +332,66 @@ transition: transform 0.3s ease-in-out;
 }
 
 .card {
-  text-align: left;
-  width: fit-content;
-  max-width: 800px;
-  margin: 0 auto 40px auto;
-  padding: 20px 30px;
-  background: rgba(255, 255, 255, 0.05); /* subtle greyish blur */
-  backdrop-filter: blur(8px);
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.07); /* soft transparent layer */
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 25px;
+  margin: 20px;
+  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeInUp 1s ease forwards;
+  color: #e0f7fa;
+  width: 280px; /* or auto depending on grid */
+  text-align: center;
+  cursor: pointer;
 }
+
+/* Hover glow effect */
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 35px rgba(0, 255, 255, 0.35);
+}
+
+/* Title inside card */
+.card h3 {
+  font-size: 1.4rem;
+  color: #00ffff;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* Description text */
+.card p {
+  font-size: 1rem;
+  color: #d0d0d0;
+  line-height: 1.6;
+}
+
+/* Optional icon or image at top */
+.card img, .card-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img, .card:hover .card-icon {
+  transform: scale(1.1);
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .card:hover {
   transform: scale(1.03);
