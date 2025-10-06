@@ -509,3 +509,14 @@ background-color: #222;
 .resume-btn:hover {
   background-color: #0056b3;
 }
+button{
+   background: linear-gradient(90deg, #00ffff, #0077ff);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+}
