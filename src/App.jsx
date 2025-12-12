@@ -1,7 +1,7 @@
 import Header from "./Header";
 import About from "./About";
 import Home from "./Home";
-import SkillsCarousel from "./skills";
+
 import EducationExperience from "./Edu&exp";
 import Projects from "./Projects";   
 import Contact from "./Contact";
@@ -13,7 +13,7 @@ export default function App() {
         <Header />
         <Home />
         <About />
-        <SkillsCarousel />
+      
         <EducationExperience />
         <Projects />
         <Contact />
