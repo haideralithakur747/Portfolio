@@ -1,24 +1,24 @@
 import Header from "./Header";
 import About from "./About";
 import Home from "./Home";
-
 import EducationExperience from "./Edu&exp";
-import Projects from "./Projects";   
+import Skills from "./skills";
+import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "./Footer";
-import "./App.css"
+import "./App.css";
+
 export default function App() {
-    return (
-        <>
-        <Header />
-        <Home />
-        <About />
-      
-        <EducationExperience />
-        <Projects />
-        <Contact />
-        <Footer />
-     
-        </>
-    )
+  return (
+    <>
+      <Header />
+      <Home />
+      <About />
+      <Skills />
+      <EducationExperience />
+      <Projects />
+      <Contact />
+      <Footer />
+    </>
+  );
 }

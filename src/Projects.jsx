@@ -67,6 +67,15 @@ export default function Projects(){
         <button onClick={() => window.open("https://react-webpage-lbob.vercel.app/")}>View Project</button>
         <button onClick={() => window.open("https://github.com/haideralithakur747/ReactWebpage")}>GitHub</button>
         </div>
+        <div className="Project_Container">
+        <h1>GeoCrop AI</h1>
+        <div className="imgbox">
+            <img src="geocrop.png" alt="GeoCrop AI" />
+        </div>
+        <button onClick={() => window.open("https://geocrop.vercel.app/")}>View Project</button>
+        <button onClick={() => window.open("https://github.com/haideralithakur747/prj  ")}>GitHub</button>
+
+        </div>
        </section>
        
     )

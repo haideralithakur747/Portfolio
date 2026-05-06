@@ -69,11 +69,12 @@
 }
 
 .home {
-   background: radial-gradient(circle at top left, #001f2d, #000);
+   background: radial-gradient(circle at top left, #1a1412, #000);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px;/}
+  padding: 80px;
+}
 
 .home-text {
   flex: 1;
@@ -96,16 +97,16 @@
 
 .home-text h1 {
   font-size: clamp(2rem, 4vw, 3rem);
-  color: cyan;
+  color: #f5a623;
   font-weight: 700;
-  text-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+  text-shadow: 0 0 20px rgba(245, 166, 35, 0.4);
 }
 
 .home-text h2 {
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-  color: #00ffff;
+  color: #f5a623;
   font-weight: 600;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  text-shadow: 0 0 10px rgba(245, 166, 35, 0.5);
 }
 
 /* Paragraph */
@@ -119,7 +120,7 @@
 
 /* Buttons */
 .home-text button {
-  background: linear-gradient(90deg, #00ffff, #0077ff);
+  background: linear-gradient(90deg, #f5a623, #c2410c);
   border: none;
   padding: 12px 28px;
   border-radius: 30px;
@@ -132,8 +133,8 @@
 }
 
 .home-text button:hover {
-  background: linear-gradient(90deg, #0077ff, #00ffff);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+  background: linear-gradient(90deg, #c2410c, #f5a623);
+  box-shadow: 0 0 25px rgba(245, 166, 35, 0.6);
   transform: translateY(-3px);
 }
 
@@ -158,12 +159,12 @@
   margin-left: auto;
   border-radius: 50%; /* keeps it circular */
   object-fit: cover;
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5); /* soft cyan glow */
+  box-shadow: 0 0 30px rgba(245, 166, 35, 0.5); /* soft #f5a623 glow */
   transition: all 0.4s ease;
 }
 .home img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 50px rgba(0, 255, 255, 0.8); /* glow increase on hover */
+  box-shadow: 0 0 50px rgba(245, 166, 35, 0.8); /* glow increase on hover */
 }
 @media (max-width: 768px) {
   .home {
@@ -179,7 +180,7 @@
 body {
   margin: 0;
   padding: 0;
- background: radial-gradient(circle at top left, #001f2d, #000);
+ background: radial-gradient(circle at top left, #1a1412, #000);
 }
 h2 {
   min-height: 2.5rem; /* or enough to fit the text */
@@ -245,7 +246,7 @@ transition: transform 0.3s ease-in-out;
   border-radius: 16px;
   padding: 25px;
   margin: 20px;
-  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.1);
+  box-shadow: 0 8px 25px rgba(245, 166, 35, 0.1);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   animation: fadeInUp 1s ease forwards;
   color: #e0f7fa;
@@ -257,13 +258,13 @@ transition: transform 0.3s ease-in-out;
 /* Hover glow effect */
 .card:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 12px 35px rgba(0, 255, 255, 0.35);
+  box-shadow: 0 12px 35px rgba(245, 166, 35, 0.35);
 }
 
 /* Title inside card */
 .card h3 {
   font-size: 1.4rem;
-  color: #00ffff;
+  color: #f5a623;
   margin-bottom: 10px;
   letter-spacing: 1px;
 }
@@ -418,7 +419,7 @@ background-color: #222;
   background-color: #0056b3;
 }
 button{
-   background: linear-gradient(90deg, #00ffff, #0077ff);
+   background: linear-gradient(90deg, #f5a623, #c2410c);
   border: none;
   padding: 12px 28px;
   border-radius: 30px;
@@ -429,7 +430,26 @@ button{
   margin-right: 10px;
 }
 button:hover{
-  background: linear-gradient(90deg, #0077ff, #00ffff);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+  background: linear-gradient(90deg, #c2410c, #f5a623);
+  box-shadow: 0 0 25px rgba(245, 166, 35, 0.6);
   transform: translateY(-3px);
+}
+/* Better mobile spacing for Skills and Education */
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 20px 10px;
+  }
+  .grid-layout {
+    grid-gap: 15px;
+    margin-bottom: 30px;
+  }
+  .card {
+    padding: 15px;
+  }
+  .card h2 {
+    font-size: 1.25rem;
+  }
+  .card p, .card ul li {
+    font-size: 0.95rem;
+  }
 }

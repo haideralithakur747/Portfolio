@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <section id="home">
       <div className="home">
-        <img src="pic1.png" alt="" />
+        <img src="picture.png" alt="" />
         <div className="home-text">
           <h3>Hi I'm </h3>
 
