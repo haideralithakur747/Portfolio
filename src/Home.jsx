@@ -46,7 +46,7 @@ export default function Home() {
             ideas to life. My goal is to craft seamless digital experiences that
             inspire and engage users.
           </p>
-          <a href="/My_Resume.pdf" download="Haider_Ali_Resume.pdf">
+          <a href="/Haider's Resume.pdf" download="Haider's Resume.pdf">
             <button>Download Resume</button>
           </a>
 
