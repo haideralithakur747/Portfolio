@@ -1,7 +1,10 @@
 {
-  "name": "final",
+  "name": "pro-portfolio",
   "private": true,
   "version": "0.0.0",
+  "description": "Pro portfolio built with React — polished UI, accessibility and performance focused",
+  "author": "Haider Thakur",
+  "homepage": "",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -1,68 +1,66 @@
+import React from "react";
+import { FaGraduationCap, FaBriefcase, FaRocket, FaRobot } from "react-icons/fa";
 
-
-export default function Portfolio() {
+export default function EducationExperience() {
   return (
-    <div className="portfolio">
+    <section id="education" className="edu-section container">
       <h1 className="section-title">Education & Experience</h1>
 
-      <div className="grid-layout">
-       
-        <div className="card">
-          <h2>Bachelor of Science in Computer Science</h2>
-          <h3>University of Management and Technology</h3>
-          <p>2023 - Present</p>
+      <div className="timeline">
+        <div className="timeline-item">
+          <div className="timeline-badge"><FaGraduationCap /></div>
+          <div className="timeline-content">
+            <div style={{marginBottom:8}}>
+              <span className="tag tag.edu">Education</span>
+            </div>
+            <h3>B.Sc. Computer Science</h3>
+            <div className="meta"><span className="active-dot"/>University of Management and Technology — 2023 - Present</div>
+            <p>Completed projects in React, JavaScript, and ML, including an AI-based crop prediction tool and other live web apps.</p>
+          </div>
         </div>
 
-        <div className="card">
-          <h2>JavaScript Programming Course</h2>
-          <h3>Coursera Online Learning Platform</h3>
-          <p>Gained strong skills in ES6, DOM, and web interactivity</p>
+        <div className="timeline-item accent-left">
+          <div className="timeline-badge"><FaBriefcase /></div>
+          <div className="timeline-content">
+            <div style={{marginBottom:8}}>
+              <span className="tag tag.exp">Experience</span>
+            </div>
+            <h3>Intern — TechLing</h3>
+            <div className="company-meta">TechLing · Startup</div>
+            <div className="meta">Jan 2025 – Mar 2025 · 2 Months — Frontend & UX</div>
+            <p>Built responsive UI components using React and Material Design, delivering 3 interactive features during a 2-month internship.</p>
+            <div className="skill-chips">
+              <span className="chip">React</span>
+              <span className="chip">HTML/CSS</span>
+              <span className="chip">UX/UI</span>
+            </div>
+          </div>
         </div>
 
-        <div className="card">
-          <h2>Intern — TechLing</h2>
-          <p><i>Duration: 10 weeks</i></p>
-          <ul>
-            <li>Learned HTML, CSS, JavaScript, React, UX/UI</li>
-            <li>Gained awareness of market trends and professional workflows</li>
-            <li>Contributed to mini-projects applying modern design principles</li>
-          </ul>
+        <div className="timeline-item">
+          <div className="timeline-badge"><FaRocket /></div>
+          <div className="timeline-content">
+            <div style={{marginBottom:8}}>
+              <span className="tag tag.cert">Projects</span>
+            </div>
+            <h3>Web Projects & Launches</h3>
+            <div className="meta">Personal and client projects</div>
+            <p>Built and deployed multiple production demos — focus on performance, accessibility, and clear UX.</p>
+          </div>
         </div>
 
-        
-        <div className="card">
-          <h2>Web Development Projects</h2>
-          <p>
-            Built responsive websites using HTML, CSS, JavaScript, React with
-            focus on UI/UX design.
-          </p>
-        </div>
-
-        <div className="card">
-          <h2>AI-Assisted Development</h2>
-          <p>
-            Leveraged Prompt Engineering to optimize coding workflows, debug
-            efficiently, and accelerate learning in frontend development.
-          </p>
-        </div>
-
-        {/* Skills as a 6th card */}
-        <div className="card">
-          <h2>Skills</h2>
-          <ul>
-            <li><b>Web Development:</b> HTML, CSS, JavaScript, React, PHP(Basic), MySQL(Basic)</li>
-            <li><b>Design Tools:</b> UI/UX principles</li>
-            <li>
-              <b>AI & Prompt Engineering:</b>
-              <ul>
-                <li>Structured prompts for React, CSS, and JavaScript coding tasks</li>
-                <li>AI-assisted content creation, report writing, and debugging</li>
-                <li>Applied role-based prompting for real-world problem-solving</li>
-              </ul>
-            </li>
-          </ul>
+        <div className="timeline-item">
+          <div className="timeline-badge"><FaRobot /></div>
+          <div className="timeline-content">
+            <div style={{marginBottom:8}}>
+              <span className="tag tag.cert">Tooling</span>
+            </div>
+            <h3>AI‑Assisted Development</h3>
+            <div className="meta">Tooling & Prompt Engineering</div>
+            <p>Using AI to speed up design iterations, code scaffolding, and automated testing workflows.</p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

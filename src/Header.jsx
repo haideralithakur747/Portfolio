@@ -1,53 +1,37 @@
 import { useState } from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "./App.css";
 
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleLinkClick = () => {
-    setIsOpen(false);
-  };
+export default function Header() {
+  const [open, setOpen] = useState(false);
 
   return (
-    <nav className="navbar">
-      <h1>MyPortfolio</h1>
+    <header className="site-header">
+      <div className="container header-inner">
+        <a href="#home" className="brand">Haider Thakur</a>
 
-      <button
-        className="hamburger"
-        type="button"
-        aria-label="Toggle navigation menu"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        ☰
-      </button>
+        <button
+          className="menu-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded={open}
+          onClick={() => setOpen((s) => !s)}
+        >
+          ☰
+        </button>
 
-      <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-        <li>
-          <a href="#home" onClick={handleLinkClick}>
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="#about" onClick={handleLinkClick}>
-            About
-          </a>
-        </li>
-        <li>
-          <a href="#skills" onClick={handleLinkClick}>
-            Skills
-          </a>
-        </li>
-        <li>
-          <a href="#projects" onClick={handleLinkClick}>
-            Projects
-          </a>
-        </li>
-        <li>
-          <a href="#contact" onClick={handleLinkClick}>
-            Contact
-          </a>
-        </li>
-      </ul>
-    </nav>
+        <nav className={`main-nav ${open ? "open" : ""}`}>
+          <a href="#home" onClick={() => setOpen(false)}>Home</a>
+          <a href="#about" onClick={() => setOpen(false)}>About</a>
+          <a href="#skills" onClick={() => setOpen(false)}>Skills</a>
+          <a href="#projects" onClick={() => setOpen(false)}>Projects</a>
+          <a className="contact-pill" href="#contact" onClick={() => setOpen(false)}>Contact</a>
+        </nav>
+
+        <div className="header-icons">
+          <a href="https://github.com/haideralithakur747" target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub /></a>
+          <a href="https://www.linkedin.com/in/haider-ali-0a6948305" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
+        </div>
+      </div>
+    </header>
   );
 }

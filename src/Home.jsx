@@ -1,57 +1,70 @@
 import { useState, useEffect } from "react";
 
 export default function Home() {
-  const words = ["FrontEnd Developer", "React Developer"];
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [displayText, setDisplayText] = useState("");
+  const words = ["React Developer", "React Enthusiast", "UI-focused Developer"];
+  const [i, setI] = useState(0);
+  const [text, setText] = useState("");
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
-    const currentWord = words[currentWordIndex];
+    const current = words[i % words.length];
     let timeout;
 
-    if (!deleting && displayText.length < currentWord.length) {
-      // typing forward
-      timeout = setTimeout(() => {
-        setDisplayText(currentWord.slice(0, displayText.length + 1));
-      }, 150);
-    } else if (deleting && displayText.length > 0) {
-      // deleting backward (faster)
-      timeout = setTimeout(() => {
-        setDisplayText(currentWord.slice(0, displayText.length - 1));
-      }, 80);
-    } else if (!deleting && displayText.length === currentWord.length) {
-      // pause before deleting
-      timeout = setTimeout(() => setDeleting(true), 1000);
-    } else if (deleting && displayText.length === 0) {
-      // move to next word
+    if (!deleting && text.length < current.length) {
+      timeout = setTimeout(() => setText(current.slice(0, text.length + 1)), 90);
+    } else if (deleting && text.length > 0) {
+      timeout = setTimeout(() => setText(current.slice(0, text.length - 1)), 45);
+    } else if (!deleting && text.length === current.length) {
+      timeout = setTimeout(() => setDeleting(true), 900);
+    } else if (deleting && text.length === 0) {
       setDeleting(false);
-      setCurrentWordIndex((prev) => (prev + 1) % words.length);
+      setI((n) => (n + 1) % words.length);
     }
 
-    return () => clearTimeout(timeout); // ✅ cleanup prevents overlap
-  }, [displayText, deleting, currentWordIndex, words]);
+    return () => clearTimeout(timeout);
+  }, [text, deleting, i]);
 
   return (
     <section id="home">
-      <div className="home">
-        <img src="picture.png" alt="" />
-        <div className="home-text">
-          <h3>Hi I'm </h3>
-
-          <h1>Haider Thakur</h1>
-          <h2 style={{ color: "white", fontSize: "2rem" }}>{displayText}</h2>
-          <p>
-            I build responsive, dynamic, and user-focused interfaces that bring
-            ideas to life. My goal is to craft seamless digital experiences that
-            inspire and engage users.
+      <div className="hero container">
+        <div className="hero-content">
+          <p className="eyebrow">
+            <span style={{letterSpacing: '1px', textTransform: 'uppercase', color: 'var(--muted)', fontSize: '0.85rem'}}>FRONTEND DEVELOPER</span>
           </p>
-          <a href="/haider resume.pdf" download="Haider's Resume.pdf">
-            <button>Download Resume</button>
-          </a>
 
-          <a href="#contact">
-            <button>Contact Me</button>
+          <h1 className="hero-title">Haider Thakur</h1>
+          <h2 className="hero-subtitle">{text}<span className="cursor">|</span></h2>
+
+          <p className="hero-desc">CS student at UMT building real-world React apps — from AI crop tools to live web converters.</p>
+
+          <div className="signal-panel" aria-label="Highlights">
+            <div className="signal-item">
+              <span className="signal-value">6+</span>
+              <span className="signal-label">live projects</span>
+            </div>
+            <div className="signal-item">
+              <span className="signal-value">2+</span>
+              <span className="signal-label">years coding</span>
+            </div>
+            <div className="signal-item">
+              <span className="signal-value">React · CSS · UI</span>
+              <span className="signal-label">core stack</span>
+            </div>
+          </div>
+
+          <div className="hero-note">
+            <span className="hero-note-dot" />
+            <span>Clean React builds. Sharp visuals. Fast recruiter scan time.</span>
+          </div>
+
+          <div className="hero-cta">
+            <a className="btn primary" href="#projects">View Projects</a>
+            <a className="btn ghost" href="/haider resume.pdf" download>Download CV</a>
+          </div>
+
+          <a className="scroll-cue" href="#about" aria-label="Scroll to about section">
+            <span className="scroll-cue-line" />
+            <span>Scroll for more</span>
           </a>
         </div>
       </div>
