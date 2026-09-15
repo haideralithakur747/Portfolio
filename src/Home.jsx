@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function Home() {
-  const words = ["React Developer", "React Enthusiast", "UI-focused Developer"];
+  const words = ["MernStack Developer", "Full-Stack Developer", "UI-focused Developer"];
   const [i, setI] = useState(0);
   const [text, setText] = useState("");
   const [deleting, setDeleting] = useState(false);
@@ -29,7 +29,7 @@ export default function Home() {
       <div className="hero container">
         <div className="hero-content">
           <p className="eyebrow">
-            <span style={{letterSpacing: '1px', textTransform: 'uppercase', color: 'var(--muted)', fontSize: '0.85rem'}}>FRONTEND DEVELOPER</span>
+            <span style={{letterSpacing: '1px', textTransform: 'uppercase', color: 'var(--muted)', fontSize: '0.85rem'}}>Full-Stack Developer</span>
           </p>
 
           <h1 className="hero-title">Haider Thakur</h1>
@@ -59,7 +59,7 @@ export default function Home() {
 
           <div className="hero-cta">
             <a className="btn primary" href="#projects">View Projects</a>
-            <a className="btn ghost" href="/haider resume.pdf" download>Download CV</a>
+            <a className="btn ghost" href="/Haider_Ali__Resume.pdf" download>Download CV</a>
           </div>
 
           <a className="scroll-cue" href="#about" aria-label="Scroll to about section">
