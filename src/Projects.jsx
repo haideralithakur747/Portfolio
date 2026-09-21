@@ -46,7 +46,7 @@ export default function Projects(){
          <div className="Project_Container">
         <h1>Clock</h1>
         <div className="imgbox">
-            <img src="Clock.png" alt="" />
+            <img src="image.png" alt="" />
         </div>
             <button className="project-btn project-btn-primary" onClick={() => window.open("https://clock1-delta.vercel.app/")}>View Project</button>
             <button className="project-btn project-btn-outline" onClick={() => window.open("https://github.com/haideralithakur747/Clock1")}>GitHub</button>
