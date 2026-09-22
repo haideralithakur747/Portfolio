@@ -3,6 +3,18 @@ export default function Projects(){
        <section id ="projects" style={{ color: "white", textAlign: "center",scrollMarginTop: "80px" }} >
        
         <h1 style={{ fontSize: "75px" }}>Projects</h1>
+
+        <div className="Project_Container">
+        <h1>GeoCrop AI</h1>
+        <div className="imgbox">
+            <img src="geocrop.png" alt="GeoCrop AI" />
+        </div>
+            <button className="project-btn project-btn-primary" onClick={() => window.open("https://geocrop.vercel.app/")}>View Project</button>
+            <button className="project-btn project-btn-outline" onClick={() => window.open("https://github.com/haideralithakur747/prj  ")}>GitHub</button>
+
+        </div>
+
+
         <div className="Project_Container">
         <h1>Currency Convertor</h1>
         <div className="imgbox">
@@ -11,11 +23,31 @@ export default function Projects(){
             <button className="project-btn project-btn-primary" onClick={() => window.open("https://currencyconvertor-eta.vercel.app/")}>View Project</button>
                 <button className="project-btn project-btn-outline" onClick={() => window.open("https://github.com/haideralithakur747/currencyconvertor")}>GitHub</button>
         </div>
-         <div className="Project_Container">
-        <h1>Tic-Tac-Toe</h1>
+
+
+ <div className="Project_Container">
+        <h1>React WebPage</h1>
         <div className="imgbox">
-            <img src="ttt.png" alt="" />
+            <img src="gm.png" alt="" />
         </div>
+            <button className="project-btn project-btn-primary" onClick={() => window.open("https://react-webpage-lbob.vercel.app/")}>View Project</button>
+            <button className="project-btn project-btn-outline" onClick={() => window.open("https://github.com/haideralithakur747/ReactWebpage")}>GitHub</button>
+        </div>
+
+        <div className="Project_Container">
+        <h1>Clock</h1>
+        <div className="imgbox">
+            <img src="image.png" alt="" />
+         </div>
+            <button className="project-btn project-btn-primary" onClick={() => window.open("https://clock1-delta.vercel.app/")}>View Project</button>
+            <button className="project-btn project-btn-outline" onClick={() => window.open("https://github.com/haideralithakur747/Clock1")}>GitHub</button>
+         </div>
+
+         <div className="Project_Container">
+         <h1>Tic-Tac-Toe</h1>
+         <div className="imgbox">
+            <img src="ttt.png" alt="" />
+         </div>
             <button className="project-btn project-btn-primary" onClick={() => window.open("https://tic-tac-toe-9jrh.vercel.app/")}>View Project</button>
                   <button className="project-btn project-btn-outline" onClick={() => window.open("https://github.com/haideralithakur747/tic-tac-toe")}>GitHub</button>
         </div>
@@ -35,22 +67,8 @@ export default function Projects(){
             <button className="project-btn project-btn-primary" onClick={() => window.open("https://calculator-in-js-sable.vercel.app/")}>View Project</button>
              <button className="project-btn project-btn-outline" onClick={() => window.open("https://github.com/haideralithakur747/calculator-in-js")}>GitHub</button>
         </div>
-        <div className="Project_Container">
-        <h1>Dummy Amazon WebPage</h1>
-        <div className="imgbox">
-            <img src="awp.png" alt="" />
-        </div>
-            <button className="project-btn project-btn-primary" onClick={() => window.open("https://amzon-webpage.vercel.app/")}>View Project</button>
-                    <button className="project-btn project-btn-outline" onClick={() => window.open("https://github.com/haideralithakur747/amzon_webpage")}>GitHub</button>
-        </div>
-         <div className="Project_Container">
-        <h1>Clock</h1>
-        <div className="imgbox">
-            <img src="image.png" alt="" />
-        </div>
-            <button className="project-btn project-btn-primary" onClick={() => window.open("https://clock1-delta.vercel.app/")}>View Project</button>
-            <button className="project-btn project-btn-outline" onClick={() => window.open("https://github.com/haideralithakur747/Clock1")}>GitHub</button>
-        </div>
+        
+        
          <div className="Project_Container">
         <h1>Guess the Number</h1>
         <div className="imgbox">
@@ -59,23 +77,17 @@ export default function Projects(){
             <button className="project-btn project-btn-primary" onClick={() => window.open("https://java-script-game-project.vercel.app/")}>View Project</button>
             <button className="project-btn project-btn-outline" onClick={() => window.open("https://github.com/haideralithakur747/java_script_game_project")}>GitHub</button>
         </div>
-           <div className="Project_Container">
-        <h1>React WebPage</h1>
+          <div className="Project_Container">
+        
+        
+        <h1>My First HTML&CSS Project </h1>
         <div className="imgbox">
-            <img src="gm.png" alt="" />
+            <img src="awp.png" alt="" />
         </div>
-            <button className="project-btn project-btn-primary" onClick={() => window.open("https://react-webpage-lbob.vercel.app/")}>View Project</button>
-            <button className="project-btn project-btn-outline" onClick={() => window.open("https://github.com/haideralithakur747/ReactWebpage")}>GitHub</button>
+            <button className="project-btn project-btn-primary" onClick={() => window.open("https://amzon-webpage.vercel.app/")}>View Project</button>
+                    <button className="project-btn project-btn-outline" onClick={() => window.open("https://github.com/haideralithakur747/amzon_webpage")}>GitHub</button>
         </div>
-        <div className="Project_Container">
-        <h1>GeoCrop AI</h1>
-        <div className="imgbox">
-            <img src="geocrop.png" alt="GeoCrop AI" />
-        </div>
-            <button className="project-btn project-btn-primary" onClick={() => window.open("https://geocrop.vercel.app/")}>View Project</button>
-            <button className="project-btn project-btn-outline" onClick={() => window.open("https://github.com/haideralithakur747/prj  ")}>GitHub</button>
-
-        </div>
+        
        </section>
        
     )
